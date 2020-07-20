@@ -51,7 +51,7 @@ http.createServer((req, res) => {
   console.log(usersId);
   if (urlObj.pathname === '/') {
     responseCode = 200;
-    content = fs.readFileSync('../UI/popup.html');
+    content = fs.readFileSync('./index.html');
   }
 
   res.writeHead(responseCode, {
