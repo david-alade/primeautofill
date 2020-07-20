@@ -4,12 +4,12 @@ const url = require('url');
 const fetch = require('node-fetch');
 const FormData = require('form-data');
 const Discord = require('discord.js');
+const config = require('./config.json');
 const client = new Discord.Client();
 const testDisc = client.guilds.cache.get('719970136995397732');
 let usersId = '';
 const port = 5000;
 var inPrime = false;
-const config = require('./config.json');
 
 
 http.createServer((req, res) => {
