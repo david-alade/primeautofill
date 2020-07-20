@@ -48,7 +48,6 @@ http.createServer((req, res) => {
         usersId = data.id;    
       })
   }
-  console.log(usersId);
   if (urlObj.pathname === '/') {
     responseCode = 200;
     content = fs.readFileSync('./index.html');
@@ -68,14 +67,5 @@ console.log("Our user's id is " + usersId);
 client.once('ready', () => {
   console.log('Ready!');  
 });
-client.on("message", (message) => {
-  if (!message.content.startsWith(config.prefix) || message.author.bot) return;
 
-  if (message.content.startsWith(config.prefix + "ping")) {
-    message.channel.send("pong!");
-  } else
-  if (message.content.startsWith(config.prefix + "foo")) {
-    message.channel.send("bar!");
-  }
-});
 client.login(config.token);
