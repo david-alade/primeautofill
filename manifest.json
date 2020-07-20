@@ -1,0 +1,69 @@
+{
+  "name": "Custom Autofill",
+  "version": "0.01",
+  "description": "Autofill for Prime Cooks",
+  "permissions": [
+    "activeTab",
+    "declarativeContent",
+    "storage",
+    "tabs"
+  ],
+  "options_page": "UI/options.html",
+  "background": {
+    "scripts": [
+      "UI/background.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*/checkouts/*"
+      ],
+      "js": [
+        "filling/shopify.js"
+      ],
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://*.shopifycs.com/*"
+      ],
+      "js": [
+        "filling/ShopifyCard.js"
+      ],
+      "all_frames": true
+    },
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      "js": [
+        "filling/stripe.js"
+      ],
+      "all_frames":true
+    },
+    {
+      "matches" : [ "https://checkout.stripe.com/pay/*" ],
+      "run_at": "document_end",
+      "js": [ "filling/stripeCard.js" ],
+      "all_frames" : true
+    }
+  ],
+  "browser_action": {
+    "default_popup": "UI/popup.html",
+    "default_icon": {
+      "16": "images/logo16.png",
+      "32": "images/logo32.png",
+      "48": "images/logo48.png",
+      "128": "images/logo128.png"
+    }
+  },
+  "icons": {
+    "16": "images/logo16.png",
+    "32": "images/logo32.png",
+    "48": "images/logo48.png",
+    "128": "images/logo128.png"
+  },
+  "manifest_version": 2
+}

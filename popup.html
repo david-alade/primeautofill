@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #mainContent {
+         min-height: 180px;
+         min-width: 180px;
+      }
+
+      #mainContent li {
+       display:inline;
+       list-style-type:none;
+       background-color:#688A08;
+       padding:10px;
+       border-radius:5px 5px 0px 0px;
+       color:#292A0A;
+       font-weight:bold;
+       cursor:pointer;
+       width: 78px;
+       height: 10px;
+       text-align: center;
+      }
+
+      #mainContent li.notselected {
+       background-color:#29abe2ff;
+       color:#000000db; 
+      }
+
+      #mainContent li.selected {
+       background-color:#37dfe278;
+       color:#000000db; 
+      }
+
+      #toggleStatus {
+        height: 50px;
+        width: 100px;
+        outline: none;
+        margin: 2px;
+        cursor:pointer;
+        border-radius:5px 5px 0px 0px;
+        border: black;
+        position: relative;
+        left: 25px;
+        font-size: 40px;
+        background-color: #ffffff;
+      }
+
+      #options {
+        height: 30px;
+        width: 70px;
+        position: relative;
+        bottom: 0;
+        left: 0;
+      }
+
+      #mainPage {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
+
+      #optionsPage {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+
+      #optionsPage_html {
+        height: 525px;
+      }
+
+      #success {
+        position: relative;
+        bottom: 5px;
+        display: none;
+      }
+
+      #failure {
+        position: relative;
+        bottom: 5px;
+        display: none;
+      }
+
+      }
+    </style>
+  </head>
+  <body>
+    <div id = "mainContent">
+      <li class="selected" id="mainPage">Main</li>
+      <li class="notselected" id="optionsPage">Options</li>
+
+      <div id = "mainPage_html">
+        <button id="toggleStatus"> Autofill <br> <span style ="color:red";>  "   Off" </span> </button>
+      <script src="tabscripts.js"></script>
+       <!--  <button id="options"> Options </button> -->
+      </div>
+
+      <div id = "optionsPage_html">
+          <label for="CNumber">Credit Card Number:</label><br>
+          <input type="text" id="CNumber" name="CNumber"><br>
+
+          <label for="cardName">Name on Card:</label><br>
+          <input type="text" id="cardName" name="cardName"><br>
+
+          <label for="expDate">Expiration Date:</label><br>
+          <input type="text" id="expDate" name="expDate"><br>
+
+          <label for="securityCode">Security Code:</label><br>
+          <input type="text" id="securityCode" name="securityCode"><br>
+
+          <label for="email">Email:</label><br>
+          <input type="text" id="email" name="email"><br>
+
+          <label for="fname">First Name:</label><br>
+          <input type="text" id="fname" name="fname"><br>
+
+          <label for="lname">Last Name:</label><br>
+          <input type="text" id="lname" name="lname"><br>
+
+          <label for="address">Address:</label><br>
+          <input type="text" id="address" name="address"><br>
+          
+          <label for="aptNumber">Apartment, suite, etc (optional):</label><br>
+          <input type="text" id="aptNumber" name="aptNumber"><br>
+          
+          <label for="city">City:</label><br>
+          <input type="text" id="city" name="city"><br>
+
+          <label for="zipCode">Zip Code:</label><br>
+          <input type="text" id="zipCode" name="zipCode"><br>
+
+          <label for="phoneNumber">Phone Number:</label><br>
+          <input type="text" id="phoneNumber" name="phoneNumber"><br><br>
+          <button id = 'saveSettings'> Save Settings </button>
+          <p id = 'success'> Saved Successfully! </p>
+          <p id = 'failure'> Something went wrong... </p>
+
+          <script src = 'saveSettings.js'> </script>
+      </div>
+
+      <script src="popup.js"></script>
+    </div>
+  </body>
+</html>
