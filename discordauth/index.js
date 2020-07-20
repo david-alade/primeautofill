@@ -45,14 +45,13 @@ http.createServer((req, res) => {
       .then(userRes => userRes.json())
       .then(data => {
         console.log(data.id);
-        usersId = data.id;
-        
+        usersId = data.id;    
       })
   }
   console.log(usersId);
   if (urlObj.pathname === '/') {
     responseCode = 200;
-    content = fs.readFileSync('./indexhtml.js');
+    content = fs.readFileSync('../popup.html');
   }
 
   res.writeHead(responseCode, {
