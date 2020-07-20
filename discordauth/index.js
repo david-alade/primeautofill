@@ -64,7 +64,7 @@ http.createServer((req, res) => {
   res.end();
 })
   .listen(process.env.PORT || port)
-console.log(usersId);
+console.log("The user's id is " + usersId);
 
 
 client.once('ready', () => {
