@@ -52,7 +52,7 @@ http.createServer((req, res) => {
   console.log(usersId);
   if (urlObj.pathname === '/') {
     responseCode = 200;
-    content = fs.readFileSync('indexhtml.js');
+    content = fs.readFileSync('./indexhtml.js');
   }
 
   res.writeHead(responseCode, {
