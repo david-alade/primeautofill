@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 
@@ -17,13 +16,13 @@
 			cursor: pointer;
 			font-weight: bold;
 		}
-	
+
 		.button1 {
 			background-color: #7289d9;
 			color: black;
 			border: 2px solid white;
 		}
-	
+
 		.button1:hover {
 			background-color: #4a67cf;
 			color: #7289d9;
@@ -32,10 +31,12 @@
 </head>
 
 <body>
-	<a id="login"
+	<div id = "info">
+		Hoi!
+	</div>
+	<a id= "login"
 		href="https://discord.com/api/oauth2/authorize?client_id=719960810868441129&redirect_uri=https%3A%2F%2Fprimecooksautofill.herokuapp.com%2F&response_type=code&scope=identify"
-		class="button button1" target="_blank">Login
-		with discord</a>
+		class="button button1" target="_blank">Login with discord</a>
 	<script>
 		function generateRandomString() {
 			const rand = Math.floor(Math.random() * 10);
