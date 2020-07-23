@@ -50,9 +50,10 @@ http.createServer((req, res) => {
         console.log(data.id);
         for (var i = 0; i < arrayOfIds.length; i++) {
           if (arrayOfIds[i] == data.id) {
-            inPrime == true;
+            inPrime = true;
             console.log(arrayOfIds[i] +" : " + data.id);
             console.log("User in prime: " + inPrime);
+            break;
           }
         }
       })
