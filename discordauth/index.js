@@ -51,6 +51,7 @@ http.createServer((req, res) => {
         for (var i = 0; i < arrayOfIds.length; i++) {
           if (arrayOfIds[i] == data.id) {
             inPrime == true;
+            console.log("User in prime: " + inPrime);
           }
         }
       })
