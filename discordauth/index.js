@@ -66,8 +66,9 @@ console.log("Our user's id is " + usersId);
 
 client.once('ready', () => {
   console.log('Ready!');  
-  const members = guild.members.fetch('719970136995397732')
-  console.log(members);
+  const testDisc = client.guilds.cache.get('719970136995397732').members.fetch();
+  
+  console.log(testDisc);
 });
 
 client.login(config.token);
