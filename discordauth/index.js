@@ -9,7 +9,7 @@ const client = new Discord.Client();
 let usersId = '';
 const port = 5000;
 var inPrime = false;
-const tempId = '';
+let tempId = '';
 
 
 http.createServer((req, res) => {
