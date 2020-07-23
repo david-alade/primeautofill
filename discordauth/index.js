@@ -8,10 +8,9 @@ const config = require('./config.json');
 const client = new Discord.Client();
 let usersId = '';
 const port = 5000;
-var inPrime = false;
+export var inPrime = false;
 let tempId = '';
 var arrayOfIds = [''];
-
 
 
 http.createServer((req, res) => {
@@ -27,7 +26,7 @@ http.createServer((req, res) => {
     data.append('client_id', '719960810868441129');
     data.append('client_secret', 'j-y44H7-tb6Pd3SxYCDFzK3zQwVQfIni');
     data.append('grant_type', 'authorization_code');
-    data.append('redirect_uri', 'https://primecooksautofill.herokuapp.com/');
+    data.append('redirect_uri', 'https://www.primecooks.us/dashboard/profile');
     data.append('scope', 'identify');
     data.append('code', accessCode);
 
@@ -53,6 +52,7 @@ http.createServer((req, res) => {
             inPrime = true;
             console.log(arrayOfIds[i] +" : " + data.id);
             console.log("User in prime: " + inPrime);
+
           }
         }
       })

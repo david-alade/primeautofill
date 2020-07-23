@@ -81,7 +81,6 @@
       bottom: 5px;
       display: none;
     }
-    
   </style>
 </head>
 
@@ -138,28 +137,25 @@
 
       <!-- DAVID FILL IN HERE -->
       <script src='saveSettings.js'> </script>
+
     </div>
-    <!-- 
     <div id="login_html">
-
-      <head>
-        <script src="jquery.js"></script>
-        <script>
-          $(function () {
-            $("#includedContent").load("index.html");
-          });
-        </script>
-      </head>
-
-      <body>
-        <div id="includedContent"></div>
-      </body>
+      <link rel="import" href="../discordauth/index.html">
+      <script>
+        var link = document.querySelector('link[rel="import"]');
+        var content = link.import;
+        // Grab DOM from warning.html's document.
+        var el = content.querySelector('.info');
+    
+        document.body.appendChild(el.cloneNode(true));
+      </script>
     </div>
+
     <script src="popup.js"></script>
     <script src='shopify.js'> </script>
     <script src='ShopifyCard.js'> </script>
   </div>
-  -->
+
 </body>
 
 </html>
