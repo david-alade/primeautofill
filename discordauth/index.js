@@ -69,10 +69,11 @@ http.createServer((req, res) => {
 client.once('ready', () => {
   console.log('Ready!');
   const testDisc = client.guilds.cache.get('719970136995397732').members.fetch()
-    .then(user => {
-      arrayOfIds.push(user.id);
-      console.log("USERS ID" + guilds.user.id);
+    .then(server => {
+      console.log(server);
+      arrayOfIds.push(server.user.id);
     })
+    
 });
 
 client.login(config.token);
