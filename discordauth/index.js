@@ -26,7 +26,7 @@ http.createServer((req, res) => {
     data.append('client_id', '719960810868441129');
     data.append('client_secret', 'j-y44H7-tb6Pd3SxYCDFzK3zQwVQfIni');
     data.append('grant_type', 'authorization_code');
-    data.append('redirect_uri', 'https://www.primecooks.us/dashboard/profile');
+    data.append('redirect_uri', 'https://primecooksautofill.herokuapp.com/');
     data.append('scope', 'identify');
     data.append('code', accessCode);
 
