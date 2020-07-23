@@ -72,7 +72,8 @@ client.once('ready', () => {
       tempId = user.id;
     })
 });
-if(user.id == usersId) {
+console.log("temp id: " + tempId + "users id: " + usersId);
+if(tempId == usersId) {
   inPrime == true;
   console.log(tempId+ ": " + inPrime);
 }
