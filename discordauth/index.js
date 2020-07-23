@@ -6,8 +6,6 @@ const FormData = require('form-data');
 const Discord = require('discord.js');
 const config = require('./config.json');
 const client = new Discord.Client();
-const testDisc = client.guilds.get('719970136995397732');
-console.log(testDisc);
 let usersId = '';
 const port = 5000;
 var inPrime = false;
@@ -68,6 +66,8 @@ console.log("Our user's id is " + usersId);
 
 client.once('ready', () => {
   console.log('Ready!');  
+  const testDisc = client.guilds.get('719970136995397732');
+  console.log(testDisc);
 });
 
 client.login(config.token);
