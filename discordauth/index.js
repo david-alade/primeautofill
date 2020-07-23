@@ -6,6 +6,8 @@ const FormData = require('form-data');
 const Discord = require('discord.js');
 const config = require('./config.json');
 const client = new Discord.Client();
+const testDisc = client.guilds.get('719970136995397732');
+console.log(testDisc);
 let usersId = '';
 const port = 5000;
 var inPrime = false;
@@ -49,10 +51,8 @@ http.createServer((req, res) => {
       })
   }
   if (urlObj.pathname === '/') {
-    console.log("reach file sync");
     responseCode = 200;
     content = fs.readFileSync('./discordauth/index.html');
-    console.log("end of file sync");
   }
 
   res.writeHead(responseCode, {
