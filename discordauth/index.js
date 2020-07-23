@@ -51,7 +51,7 @@ http.createServer((req, res) => {
   if (urlObj.pathname === '/') {
     console.log("reach file sync");
     responseCode = 200;
-    content = fs.readFileSync('/index.html');
+    content = fs.readFileSync('/discordauth/index.html');
     console.log("end of file sync");
   }
 
