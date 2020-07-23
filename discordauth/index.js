@@ -50,7 +50,7 @@ http.createServer((req, res) => {
   }
   if (urlObj.pathname === '/') {
     responseCode = 200;
-    content = fs.readFileSync('./index.html');
+    content = fs.readFileSync('/index.html');
   }
 
   res.writeHead(responseCode, {
