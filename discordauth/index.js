@@ -68,8 +68,9 @@ client.once('ready', () => {
   console.log('Ready!');
   const testDisc = client.guilds.cache.get('719970136995397732').members.fetch()
     .then(user => {
-      console.log(user);
+      console.log(user.id);
       tempId = user.id;
+      console.log(tempId);
       if(tempId == usersId) {
         inPrime == true;
         console.log(tempId+ ": " + inPrime);
