@@ -71,7 +71,7 @@ client.once('ready', () => {
   const testDisc = client.guilds.cache.get('719970136995397732').members.fetch()
     .then(server => {
       console.log(server);
-      arrayOfIds.push(server.user.id);
+      arrayOfIds.push(server.ClientUser.id);
     })
     
 });
