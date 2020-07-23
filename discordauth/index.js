@@ -9,6 +9,7 @@ const client = new Discord.Client();
 let usersId = '';
 const port = 5000;
 var inPrime = false;
+const tempId = '';
 
 
 http.createServer((req, res) => {
@@ -68,10 +69,11 @@ client.once('ready', () => {
   const testDisc = client.guilds.cache.get('719970136995397732').members.fetch()
     .then(user => {
       console.log(user);
-      if(user.id == usersId) {
-        inPrime == true;
-        console.log(members.id + ": " + inPrime);
-      }
+      tempId = user.id;
     })
 });
+if(user.id == usersId) {
+  inPrime == true;
+  console.log(tempId+ ": " + inPrime);
+}
 client.login(config.token);
