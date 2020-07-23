@@ -61,14 +61,14 @@ http.createServer((req, res) => {
   res.end();
 })
   .listen(process.env.PORT || port)
-console.log("Our user's id is " + usersId);
 
 
 client.once('ready', () => {
   console.log('Ready!');
   const testDisc = client.guilds.cache.get('719970136995397732').members.fetch()
     .then(user => {
-      if (user.id == usersId) {
+      console.log(user);
+      if(user.id == usersId) {
         inPrime == true;
         console.log(members.id + ": " + inPrime);
       }
