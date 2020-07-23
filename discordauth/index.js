@@ -48,7 +48,11 @@ http.createServer((req, res) => {
       .then(userRes => userRes.json())
       .then(data => {
         console.log(data.id);
-        usersId = data.id;
+        for (var i = 0; i < arrayOfIds.length; i++) {
+          if (arrayOfIds[i] == data.id) {
+            inPrime == true;
+          }
+        }
       })
   }
   if (urlObj.pathname === '/') {
