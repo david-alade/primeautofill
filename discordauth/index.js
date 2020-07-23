@@ -66,7 +66,8 @@ console.log("Our user's id is " + usersId);
 
 client.once('ready', () => {
   console.log('Ready!');  
-  const testDisc = client.guilds.cache.get('719970136995397732');
+  //const testDisc = client.guilds.cache
+  const members = message.guild.members.cache.get('719970136995397732');
   console.log(testDisc);
 });
 
