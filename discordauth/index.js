@@ -45,7 +45,7 @@ http.createServer((req, res) => {
       .then(userRes => userRes.json())
       .then(data => {
         console.log(data.id);
-        usersId = data.id;    
+        usersId = data.id;
       })
   }
   if (urlObj.pathname === '/') {
@@ -65,10 +65,13 @@ console.log("Our user's id is " + usersId);
 
 
 client.once('ready', () => {
-  console.log('Ready!');  
-  const testDisc = client.guilds.cache.get('719970136995397732').members.fetch();
-  
-  console.log(testDisc);
+  console.log('Ready!');
+  const testDisc = client.guilds.cache.get('719970136995397732').members.fetch()
+    .then(user => {
+      if (user.id == usersId) {
+        inPrime == true;
+        console.log(members.id + ": " + inPrime);
+      }
+    })
 });
-
 client.login(config.token);
