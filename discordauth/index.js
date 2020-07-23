@@ -8,7 +8,7 @@ const config = require('./config.json');
 const client = new Discord.Client();
 let usersId = '';
 const port = 5000;
-export var inPrime = false;
+var inPrime = false;
 let tempId = '';
 var arrayOfIds = [''];
 
