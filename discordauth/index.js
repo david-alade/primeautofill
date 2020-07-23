@@ -10,6 +10,8 @@ let usersId = '';
 const port = 5000;
 var inPrime = false;
 let tempId = '';
+var arrayOfIds = [''];
+
 
 
 http.createServer((req, res) => {
@@ -68,9 +70,9 @@ client.once('ready', () => {
   console.log('Ready!');
   const testDisc = client.guilds.cache.get('719970136995397732').members.fetch()
     .then(user => {
-      inPrime = user.id == usersId;
-      console.log(inPrime);
+      arrayOfIds.push(user.id);
     })
 });
+console.log(arrayOfIds);
 
 client.login(config.token);
