@@ -71,10 +71,11 @@ client.once('ready', () => {
       console.log(user);
       tempId = user.id;
     })
+    if(tempId == usersId) {
+      inPrime == true;
+      console.log(tempId+ ": " + inPrime);
+      console.log("temp id: " + tempId + "users id: " + usersId);
+    }
 });
-console.log("temp id: " + tempId + "users id: " + usersId);
-if(tempId == usersId) {
-  inPrime == true;
-  console.log(tempId+ ": " + inPrime);
-}
+
 client.login(config.token);
