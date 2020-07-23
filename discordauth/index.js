@@ -70,7 +70,8 @@ client.once('ready', () => {
   console.log('Ready!');
   const testDisc = client.guilds.cache.get('719970136995397732').members.fetch()
     .then(user => {
-      console.log(user.keyArray());
+      arrayOfIds = user.keyArray();
+      console.log(arrayOfIds);
     })
 });
 
