@@ -7,12 +7,17 @@ document.getElementById('optionsPage_html').style.display = 'none';
 document.getElementById('mainPage_html').style.display = 'none';
 for (let i = 0; i < tabs.length; i++) {
   tabs[i].addEventListener("click", function (id) {
+    if(!inPrime)
+    {
+      document.getElementById('login_html').style.display = 'none';
+    }
     document.getElementById('mainPage_html').style.display = 'none';
     document.getElementById('optionsPage_html').style.display = 'none';
     document.getElementById(tabs[i].id + "_html").style.display = 'block';
     document.getElementById("mainPage").className = "notselected";
     document.getElementById("optionsPage").className = "notselected";
     document.getElementById(tabs[i].id).className = "selected";
+    
   })
 }
 
