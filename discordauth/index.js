@@ -51,7 +51,9 @@ http.createServer((req, res) => {
           if (arrayOfIds[i] == data.id) {
             inPrime = true;
             console.log(arrayOfIds[i] +" : " + data.id);
-            console.log("User in prime: " + inPrime);
+            chrome.storage.local.set({access: inPrime}, function() {
+              console.log('User in prime:' + value);
+            });
 
           }
         }
@@ -82,3 +84,4 @@ client.once('ready', () => {
 });
 
 client.login(config.token);
+
