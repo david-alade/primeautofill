@@ -83,7 +83,3 @@
 
   client.login(config.token);
 
-  chrome.storage.local.set({ access: inPrime }, function () {
-    console.log('User in prime:' + value);
-  });
-
