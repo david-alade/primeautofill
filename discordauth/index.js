@@ -88,4 +88,4 @@ function haveAccess() {
   });
   return inPrime;
 }
-
+haveAccess();
