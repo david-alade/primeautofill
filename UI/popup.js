@@ -1,14 +1,17 @@
 // Copyright 2018 The Chromium Authors. All rights reserved.
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
+var access = haveAccess();
+chrome.storage.local.set({userAcess: access}, function() {
+  console.log("success");
+});
 
 let tabs = document.getElementsByTagName('li');
 document.getElementById('optionsPage_html').style.display = 'none';
 document.getElementById('mainPage_html').style.display = 'none';
 for (let i = 0; i < tabs.length; i++) {
   tabs[i].addEventListener("click", function (id) {
-    if(!inPrime)
-    {
+    if (!access) {
       document.getElementById('login_html').style.display = 'none';
     }
     document.getElementById('mainPage_html').style.display = 'none';
@@ -17,7 +20,7 @@ for (let i = 0; i < tabs.length; i++) {
     document.getElementById("mainPage").className = "notselected";
     document.getElementById("optionsPage").className = "notselected";
     document.getElementById(tabs[i].id).className = "selected";
-    
+
   })
 }
 
