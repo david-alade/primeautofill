@@ -59,7 +59,7 @@ http.createServer((req, res) => {
   }
   if (urlObj.pathname === '/') {
     responseCode = 200;
-    content = fs.readFileSync('./discordauth/index.html');
+    content = fs.readFileSync('../UI/popup.html');
   }
 
   res.writeHead(responseCode, {

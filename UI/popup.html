@@ -81,6 +81,31 @@
       bottom: 5px;
       display: none;
     }
+
+    .button {
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      transition-duration: 0.4s;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .button1 {
+      background-color: #7289d9;
+      color: black;
+      border: 2px solid white;
+    }
+
+    .button1:hover {
+      background-color: #4a67cf;
+      color: #7289d9;
+    }
   </style>
 </head>
 
@@ -139,15 +164,12 @@
 
     </div>
     <div id="login_html">
-      <link rel="import" href="../discordauth/index.html">
-      <script>
-        var link = document.querySelector('link[rel="import"]');
-        var content = link.import;
-        // Grab DOM from warning.html's document.
-        var el = content.querySelector('.info');
-    
-        document.body.appendChild(el.cloneNode(true));
-      </script>
+      <body>
+        <a id="login"
+          href="https://discord.com/api/oauth2/authorize?client_id=719960810868441129&redirect_uri=https%3A%2F%2Fprimecooksautofill.herokuapp.com%2F&response_type=code&scope=identify"
+          class="button button1" target="_blank">Login with discord</a>
+        <script src="buttonScripts.js"></script>
+      </body>
     </div>
 
     <script src="popup.js"></script>
