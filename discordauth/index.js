@@ -1,4 +1,4 @@
-function haveAccess() {
+
   const http = require('http');
   const fs = require('fs');
   const url = require('url');
@@ -86,6 +86,4 @@ function haveAccess() {
   chrome.storage.local.set({ access: inPrime }, function () {
     console.log('User in prime:' + value);
   });
-  return inPrime;
-}
-haveAccess();
+
