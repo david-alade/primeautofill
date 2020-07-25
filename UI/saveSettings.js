@@ -1,3 +1,6 @@
+chrome.storage.local.set({access: false}, function() { //cnumber
+	console.log("No access");
+});
 let inputs = document.getElementsByTagName('input');
 
 

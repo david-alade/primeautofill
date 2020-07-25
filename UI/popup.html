@@ -110,9 +110,9 @@
 </head>
 
 <body>
-  <script src = "../discordauth/index.js" ></script>
   <script src="popup.js"></script>
-  
+
+
   <div id="mainContent">
     <li class="selected" id="mainPage">Main</li>
     <li class="notselected" id="optionsPage">Options</li>
@@ -158,23 +158,36 @@
 
       <label for="phoneNumber">Phone Number:</label><br>
       <input type="text" id="phoneNumber" name="phoneNumber"><br><br>
-      <button id='saveSettings'> Save Settings </button>
-      <p id='success'> Saved Successfully! </p>
-      <p id='failure'> Something went wrong... </p>
 
-      <!-- DAVID FILL IN HERE -->
-      <script src='saveSettings.js'> </script>
-
-    </div>
-    <div id="login_html">
-      <body>
-        <a id="login"
-          href="https://discord.com/api/oauth2/authorize?client_id=719960810868441129&redirect_uri=https%3A%2F%2Fprimecooksautofill.herokuapp.com%2F&response_type=code&scope=identify"
-          class="button button1" target="_blank">Login with discord</a>
-        <script src="../discordauth/buttonScripts.js"></script>
+      <div id = "savButton">
+        <button id='saveSettings'> Save Settings </button>
+        <script src='saveSettings.js'> </script>
+        <script src="../discordauth/index.js"></script>
+        <script>
+          document.getElementById("saveSettings").disabled = true;
+          console.log(inPrime);
+        </script>
         
-      </body>
-    </div>
+        <p id='success'> Saved Successfully! </p>
+        <p id='failure'> Something went wrong... </p>
+      </div>
+        
+
+    <!-- DAVID FILL IN HERE -->
+    <script src='saveSettings.js'> </script>
+
+  </div>
+  <div id="login_html">
+
+    <body>
+      <a id="login"
+        href="https://discord.com/api/oauth2/authorize?client_id=719960810868441129&redirect_uri=https%3A%2F%2Fprimecooksautofill.herokuapp.com%2F&response_type=code&scope=identify"
+        class="button button1" target="_blank">Login with discord</a>
+      <script src="../discordauth/buttonScripts.js"></script>
+
+      
+    </body>
+  </div>
 
   </div>
 
